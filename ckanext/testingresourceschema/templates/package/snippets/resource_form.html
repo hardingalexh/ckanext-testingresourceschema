@@ -1,0 +1,15 @@
+{% ckan_extends %}
+
+{% block metadata_fields %}
+    {{ super() }}
+    <div class="form-group">
+        <label for="testing_custom_field">Testing Custom Field</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="testing_custom_field" 
+            name="testing_custom_field"
+            value="{{data.get('testing_custom_field', '')}}"
+        />
+    </div>
+{% endblock %}
